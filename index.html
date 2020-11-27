@@ -1,46 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello world</title>
+    <meta charset="utf-8">
+    <title>Harjutustund</title>
+    <style>
+        .text {
+            text-align: center;
+        }
+        #outer-div {
+            height: 720px;
+            width: 600px;
+        }
+        #inner-div {
+            height: 400px;
+            width: 600px;
+            margin: -100px;
+            padding: 100px;
+        }
+        body {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        footer, nav {
+            background-color: #ADD8E6;
+            border-radius: .25rem;
+            padding: 0.6rem;
+        }
+        #blya {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            line-height: 2rem;
+            border: 0px solid red;
+        }
+        #blya div.nimi-cell {
+            flex-basis: 40%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #blya div.pnimi-cell {
+            flex-basis: 44%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #blya div.hinne-cell {
+            flex-basis: 16%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #blya div.header-cell1 {
+            flex-basis: 40%;
+        }
+        #blya div.header-cell2 {
+            flex-basis: 44%;
+        }
+        #blya div.header-cell-hinne {
+            flex-basis: 16%;
+        }
+        .checked {
+            color: orange;
+        }
+        nav {
+            font-family: "arial", sans-serif;
+        }
+        main {
+            margin-top: 1em;
+            height: 650px;
+        }
+        #input-form {
+            padding-top: 2rem;
+            display: flex;
+            max-width: 30rem;
+            flex-wrap: wrap;
+            border: 0px solid red;
+        }
+        #input-form div.input-div {
+            width: 20rem;
+            margin-top: 1em;
+        }
+        #input-form div.label-cell {
+            border: 0px solid red;
+            width: 8rem;
+            text-align: right;
+            padding-right: 1rem;
+            line-height: 2rem;
+            margin-top: 0.5em;
+        }
+        input#pk {
+            width: 20rem;
+        }
+        select {
+            width: 20.5rem;
+        }
+        #input-form div.input-div2 {
+            width: 29.5rem;
+            text-align: right;
+        }
+        #authors {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            line-height: 2rem;
+            border: 0px solid red;
+        }
+        #authors div.nimi-cell {
+            flex-basis: 40%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #authors div.pnimi-cell {
+            flex-basis: 44%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #authors div.hinne-cell {
+            flex-basis: 16%;
+            font-family: "arial", sans-serif;
+            margin-top: 1em;
+        }
+        #authors div.header-cell1 {
+            flex-basis: 40%;
+        }
+        #authors div.header-cell2 {
+            flex-basis: 44%;
+        }
+        #authors div.header-cell-hinne {
+            flex-basis: 16%;
+        }
+        #blya div.header-divider {
+            padding-top: 0.2rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            background-color: #666;
+        }
+        #blya div.flex-break {
+            flex-basis: 100%;
+            height: 0;
+        }
+        #authors div.header-divider {
+            border: 0px solid red;
+            padding-top: 0.2rem;
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            background-color: #666;
+        }
+        #authors div.flex-break {
+            flex-basis: 100%;
+            height: 0;
+        }
+    </style>
+    <link href="maksik2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>Hello world</h1>
-<a>Minu matrilikk number : 205906IAAB</a>
-<span></span>
-<a href="https://taltech.ee/"><h3>This is Taltech link</h3></a>
-<span></span>
-<table border="1">
-<tr>
-    <td>Okor</td>
-    <td>Lokor</td>
-    <td>94</td>
-</tr>
-    <tr>
-    <td>Jar</td>
-    <td>Jarg</td>
-    <td>21</td>
-</tr>
-    <tr>
-        <td>Lucij</td>
-        <td>Hujucij</td>
-        <td>10</td>
-    </tr>
-</table>
-<img src="https://f.vividscreen.info/soft/59bf4538a454ce6c00770447e64be033/Cute-Little-Kitten-square-l.jpg" alt="Cute Kitty" width="200" height="200">
-<a>Vältige kantseliiti ja tarbetut keerulisust. Kantseliit ehk bürokraatlik släng ei tee teksti tähtsamaks.
-    Asutuste veebitekstid põhinevad tihti seadustel ehk nende kirjutamisel on aluseks võetud juriidiline tekst.
-    Sageli koostavad veebitekste needsamad inimesed, kes sõnastavad õigusakte.
-    Kantseliidi kasutamist põhjendatakse pahatihti ametliku tekstiga, mis peabki olema raskepärane. See ei ole õige.
-    Kantseliit pole õigustatud ka juriidilistes tekstides,
-    kuid eriti hoolikalt tuleb jälgida, et kantseliitlikud tarindid veebikasutajani ei jõuaks.
-    Kantseliidist hoidumiseks tuleb silmas pidada järgmisi põhimõttte. Viimase ööpäeva jooksul analüüsiti Eestis 640 haigust COVID-19 põhjustava SARS-CoV-2 viiruse esmast testi, millest 17 testi tulemus osutus positiivseks.
-
-    12 uut kinnitatud nakkusjuhtu lisandus Harjumaale, Ida-Virumaal lisandus kolm, Pärnumaale ja Võrumaale üks juhtum.
-
-    Kõik 12 Harjumaa juhtumit laekusid Tallinna. Kolm Harjumaa juhtumit on seotud nakatumisega pereringis ning ühel juhul toodi viirus sisse Inglismaalt. Ülejäänud juhtumite asjaolud on selgitamisel.
-
-    Põhja regionaalosakonna jälgimisel on üle 1800 inimese, kellest 332 on haigestunud. Kokku saab põhja regionaalosakonna tööpiirkonnas eristada kümmet kollet: esimese töökoha koldega on seotud 42, teise töökoha koldega kaheksa ning kolmandas töökoha koldes on kaheksa haigestunut. Perekonna koldes on viis inimesest. Esimeses kooli koldes on kuus ja teises kooli koldes on viis haigestunut. Neljandas töökoha koldes on üheksa nakatunut ning viiendas töökoha koldes kokku kuus inimest. Peokoldes on 17 inimest. Kuuendas töökoha koldes on viis haigestunut.
-    </a>
+<div id="outer-div">
+    <div id="inner-div">
+        <div id="blya">
+            <div class="nimi-cell header-cell">СТРИМЕР</div>
+            <div class="pnimi-cell header-cell">МОДЕР</div>
+            <div class="hinne-cell header-cell">ОЦЕНКА</div>
+            <div class="flex-break header-divider"></div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">OniRise</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">MysteryWeirdo</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">RaspberryDoctor</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">Pixel_Bot</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">ResidentSmurfik</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">hungerrstrike</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">old_loli_and_ia_ebal</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="header-cell1">Dawgos</div>
+            <div class="header-cell2">Dawgos</div>
+            <div class="header-cell-hinne">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star"></span>
+            </div>
+        </div>
+        <div class="text">
+            <h1>
+                МАКС, НУ ДАЙ МОДЕРКУ, НУ ЧТО ТЫ КАК НЕ РОДНОЙ, Я ТЕБЕ СОСКИ КИДАЛ, ТЫ МНЕ БИЛДЫ НА ПОЕ.
+                ТАКОЕ ТОЛЬКО САМЫЕ БЛИЗКИЕ ЛЮДИ КИДАЮТ. И Я СИЖУ ДО СИХ ПОР БЕЗ МОДЕРКИ?
+                ЧЕСТНО, Я НЕ ПРИВЫК ЧТО ТО ДЕРЖАТЬ В СЕБЕ, ПОЭТОМУ СКАЖУ ПРЯМО. МЕНЯ КРАЙНЕ ОСКОРБЛЯЕТ ТО, ЧТО Я
+                ДО СИХ ПОР БЕЗ МОДЕРКИ, И ТЫ БУДТО СТОРОНИШЬСЯ МЕНЯ. ПОЭТОМУ Я ОБЪЯВЛЯЮ ТЕБЕ УЛЬТИМАТУМ.
+                ИЛИ ТЫ ДАЕШЬ МНЕ МОДЕРКУ, ИЛИ Я УХОЖУ НАВСЕГДА. АЛЬТЕРНАТИВОЙ БУДЕТ ПРОВЕСТИ ГОЛОСОВАНИЕ НА НАЗНАЧЕНИЕ МЕНЯ МОДЕРОМ.
+                ЕСЛИ Я ПРОИГРАЮ, Я ПРИМУ ПОРАЖЕНИЕ ДОСТОЙНО, И ОСТАНУСЬ В ЧАТЕ, И БУДУ ВЕЧНО ЗАШКВАРЕННЫМ НЕДОМОДЕРОМ.
+            </h1>
+        </div>
+    </div>
+</div>
 </body>
 </html>
